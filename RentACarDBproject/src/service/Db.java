@@ -28,7 +28,7 @@ public class Db {
     // 3. ŞİFRE
     // PostgreSQL kurulumunda belirlediğin şifre.
     // !!! DİKKAT !!! -> Kendi bilgisayarındaki şifre neyse buraya onu yazmalısın.
-    private static final String PASS = "123456";
+    private static final String PASS = "1234";
 
     // ==========================================
     // BAĞLANTI METODU (CONNECTION FACTORY)

@@ -1,3 +1,4 @@
+
 -- ============================================================================
 -- ARAÇ KİRALAMA VERİTABANI (CAR RENTAL DB) - KURULUM VE TEST SENARYOSU
 -- ============================================================================
@@ -91,6 +92,12 @@ CREATE TABLE reservation(
     
     CHECK (end_date >= start_date) -- Bitiş tarihi, başlangıç tarihinden önce olamaz.
 );
+-- 1. Önce eski kısıtlamayı (constraint) kaldır
+ALTER TABLE reservation DROP CONSTRAINT IF EXISTS reservation_reservation_status_check;
+
+-- 2. 'COMPLETED' değerini de içeren yeni kısıtlamayı ekler
+ALTER TABLE reservation ADD CONSTRAINT reservation_reservation_status_check 
+CHECK (reservation_status IN ('PENDING', 'APPROVED', 'CANCELLED', 'COMPLETED'));
 
 -- ----------------------------------------------------------------------------
 -- 6. KİRALAMALAR TABLOSU (RENTAL)
