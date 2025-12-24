@@ -19,7 +19,7 @@ public class RentACarApp extends Application {
      * Burası UI (Arayüz) işlemlerinin başladığı yerdir.
      *
      * @param primaryStage : İşletim sistemi tarafından oluşturulan
-     * uygulamanın ana penceresi (Window/Stage).
+     * Uygulamanın ana penceresi (Window/Stage).
      */
     @Override
     public void start(Stage primaryStage) {
